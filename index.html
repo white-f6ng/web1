@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Frame</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">'
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const dropdownButtons = document.querySelectorAll('.dropdown button');
+
+    dropdownButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        // Find the icon inside the button
+        const icon = this.querySelector('i');
+
+        // Toggle the 'fa-rotate-180' class to rotate the icon
+        icon.classList.toggle('fa-rotate-180');
+      });
+    });
+  });
+  function toggleCard(button) {
+  const cardContent = button.parentElement.querySelector('.card-content');
+  
+  if (button.textContent === 'See More') {
+    cardContent.style.maxHeight = 'none'; // Show the full content
+    button.textContent = 'See Less';
+  } else {
+    cardContent.style.maxHeight = '88.5px'; // Set a fixed height to show a limited content
+    button.textContent = 'See More';
+  }
+}
+function myFunction(dropdownNumber) {
+  var dropdown = document.getElementById("myDropdown" + dropdownNumber);
+  dropdown.classList.toggle("show");
+}
+
+// Close the dropdowns if the user clicks outside of them
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        // Check if the clicked element is not within the open dropdown's content area
+        if (!openDropdown.contains(event.target)) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+}
+
+</script>
+
+   <script src="https://kit.fontawesome.com/25648fba2f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="topnav">
+    <p>Logo</p>
+    </nav>
+      <div class="right-elements">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>  
+          <a href="">Contact&nbsp;Us</a>
+      
+      
+      </div>
+  
+  <span class="color-block"></span>
+<div class="dropdown">
+      <button  type="button" onclick="myFunction(1)" id="dropbtn"class="dropbtn dropbtn1"><span class="content-ele">Step 1 : Niche Products</span><i class="fas fa-angle-down"></i></button>
+      <div id="myDropdown1" class="dropdown-content fcontent" style="background-color: #EAF0F6;">
+        <p class="ele">Baby Products</p>
+        <hr>
+    <div class="main">
+      <ul class="cards">
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="assets/Baby carriers.png" alt="mixed vegetable salad in a mason jar." />
+             
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Baby Carriers</h2>
+              <div class="card_text">
+                <p>Your little one was carried for 9 long months in the womb. While that may sometimes have been a challenge for the person doing...
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="assets/Baby Diapers.png" alt="mixed vegetable salad in a mason jar." />
+             
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Baby Diapers</h2>
+              <div class="card_text">
+                <p>Diaper changing might seem complicated at first. But with a little practice, you'll find that keeping your baby clean and dry is easy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="assets/baby skin care.png" alt="mixed vegetable salad in a mason jar." />
+             
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Baby Skin Care</h2>
+              <div class="card_text">
+                <p>Your newborn's skin is so sensitive. Don't worry - rashes are common during baby's first year. Learn how to keep your baby's skin...
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="assets/bottle feeding.png" alt="mixed vegetable salad in a mason jar." />
+             
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Bottle Feeding</h2>
+              <div class="card_text">
+                <p>The practice of feeding an infant a substitute for breast milk. Pediatricians generally advise exclusively...
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="assets/monitors.png" alt="mixed vegetable salad in a mason jar." />
+             
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Baby Monitors</h2>
+              <div class="card_text">
+                <p>Electronic device consisting of a one-way radio or video transmitter with a portable receiver for remotely listening to or observing...
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="assets/teethers.png" alt="mixed vegetable salad in a mason jar." />
+             
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Baby Teethers</h2>
+              <div class="card_text">
+                <p>A teether, teething toy, or chew toy is a device given to teething infants. Most modern teethers are silicone, but can also...
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <p class="ele">Kitchen tools</p>
+        <hr>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="assets/stainers.png" alt="mixed vegetable salad in a mason jar." />
+             
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Food Stainers</h2>
+              <div class="card_text">
+                <p>A kitchen device that is most used to strain liquids away from other ingredients but also to ocassionally sift fine ingredients...
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="assets/knives.png" alt="mixed vegetable salad in a mason jar." />
+             
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Kitchen Knives</h2>
+              <div class="card_text">
+                <p>A kitchen knife is any knife that is intended to be used in food preparation. ... Kitchen knives can be made from several different materials.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="assets/peelers.png" alt="mixed vegetable salad in a mason jar." />
+             
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">peelers</h2>
+              <div class="card_text">
+                <p>A peeler is a kitchen tool consisting of a metal blade with a slot with a sharp edge attached to a handle, used to remove...
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+ 
+      </ul>
+    </div> 
+      </div>
+</div>
+<div class="dropdown">
+    <button  type="button" id="mydrop"onclick="myFunction(2)"class="dropbtn sdropbtn" ><span class="content-ele">Step 2 : Finding Keywords </span><i class="fas fa-angle-down"></i></button>
+      <div id="myDropdown2" class="dropdown-content scontent" style="background-color: #EAF0F6;">
+        
+          <p class="line">Tools to Find Keywords</p>
+          <button type="button" class="outline-success1">#1 Tool</button> <span class="noob">Keyword.io</span><br>
+          
+          <button type="button" class="outline-success">#2 Tool</button> <span class="tab">Keyword Sheeter</span>
+          <button type="button" class="outline-success2" >#3 Tool</button> <span class="tab3">Keyword Sheeter</span>
+      </div> 
+</div>
+
+      </div>
+</div>
+<div class="dropdown">
+  <button  type="button" id="mydrop"onclick="myFunction(3)"class="dropbtn tdropbtn" ><span class="content-ele">Step 3 : Niche Products </span><i class="fas fa-angle-down"></i></button>
+    <div id="myDropdown3" class="dropdown-content tcontent" style="background-color: #EAF0F6;">
+          
+          <p class="line">Tools to Get Search Volume</p>
+          <button type="button" class="outline-success1">#1 Tool</button><span class="noob">SemScoop</span><br>
+          
+          <button type="button" class="outline-success">#2 Tool</button> <span class="tab">LinkGraph</span>
+          <button type="button" class="outline-success3">#3 Tool</button> <span class="tab2">SearchVolume.io</span> 
+          
+    </div> 
+</div>
+    
+    
+</body>
+</html>
